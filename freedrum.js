@@ -1,6 +1,6 @@
 let bluetoothLEMidi = '03b80e5a-ede8-4b33-a751-6ce34ec4c700';
 let bleMidiCharacteristic = '7772e5db-3868-4112-a1a9-f2669d106bf3';
-let isAvailable = true;
+let isTriggerReady = true;
 
 var div = document.createElement('div');
 div.innerHTML = '<button id="connect" style="border:none;outline:none;background:orange;border-radius:10px;padding:10px;">Connect sensors</button>';
@@ -65,11 +65,11 @@ class FreedrumStick {
 
   // API RevealJs : https://github.com/hakimel/reveal.js/#api
   handleDrumSticksEvents(command, note){
-    if(isAvailable === false) {
+    if(isTriggerReady === false) {
       return;
     } else {
       if(command === 153){
-        isAvailable = false;
+        isTriggerReady = false;
         switch(note) {
           case 38: 
             Reveal.down();
@@ -86,7 +86,7 @@ class FreedrumStick {
            Reveal.left();
            break;
         }
-        setTimeout(() =>  isAvailable = true , 300);
+        setTimeout(() =>  isTriggerReady = true , 300);
       }
     }
   }
