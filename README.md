@@ -13,6 +13,8 @@ Simply add the freedrum.js script into your ReavealJS project and the following 
 <script src="path-to-file/freedrum.js></script>
 ```
 
+> The script will add a button on your first slide to connect sensors.
+
 ## Explanation
 
 The bluetooth sensors emits signals as an array of 5 integers.
