@@ -4,7 +4,7 @@
 
 This is a script allowing to use [Freedrum](https://www.freedrum.rocks/) sticks to navigate through slides into a RevealJS application, using the [Web Bluetooth API](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web).
 
-# Video
+[Hosted example on Netlify](https://freedrum-revealjs.netlify.com/#/)
 
 # Add to your project
 
